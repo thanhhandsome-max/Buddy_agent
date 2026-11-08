@@ -1,0 +1,11 @@
+{
+  "model": "MoveNet.MultiPose.Lightning v1",
+  "original": "https://tfhub.dev/google/tfjs-model/movenet/multipose/lightning/1",
+  "publisher": "https://github.com/vladmandic/movenet",
+  "commit": "76086d9a656de8d52f9c6c2521e5c768af3790e1",
+  "hashes": {
+    "movenet-multipose.bin": "19828492d4a69c2e08915916c70f4d22c421c3b59152dfa5601834fc54f54118",
+    "model.json": "3c76e18669efc50148b28d0be97db491dc055cb2be292d248ec129031c5aa5de"
+  },
+  "note": "Archived TFJS conversion; not a fall, violence or medical classifier. See model card and validation limits."
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Buddy",
+  "short_name": "Buddy",
+  "description": "Multi-channel AI gateway control panel",
+  "start_url": "./",
+  "display": "standalone",
+  "theme_color": "#0a0a0a",
+  "background_color": "#0a0a0a",
+  "icons": [
+    {
+      "src": "./favicon.svg?v=8709bdc7e8b360f4221de3923948107ec8ea46c508009d7a608f117f3d4da606",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "./favicon-32.png?v=8709bdc7e8b360f4221de3923948107ec8ea46c508009d7a608f117f3d4da606",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "./apple-touch-icon.png?v=8709bdc7e8b360f4221de3923948107ec8ea46c508009d7a608f117f3d4da606",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
