@@ -1,0 +1,46 @@
+# Workspace-level exclusions
+_buddy_rollback/
+references/
+sites/
+buddy-download-site/
+.pnpm-store/
+
+# Dependencies & package stores
+node_modules/
+buddy-app/node_modules/
+buddy-app/ui/node_modules/
+buddy-runtime/node_modules/
+
+# Runtime state, secrets & local tokens (NEVER COMMIT)
+buddy-runtime/state/
+.env
+.env.*
+!.env.example
+!buddy-app/.env.example
+api-key.txt
+client_secret*.json
+google-oauth-client.json
+
+# Build outputs, compiled bundles & caches
+buddy-app/dist/
+buddy-app/.artifacts/
+buddy-app/.openclaw/
+buddy-app/.cache/
+buddy-app/.tmp/
+buddy-app/.dev-state
+buddy-app/coverage/
+buddy-runtime/control-ui/*
+!buddy-runtime/control-ui/index.html
+!buddy-runtime/control-ui/manifest.webmanifest
+!buddy-runtime/control-ui/favicon.svg
+*.tsbuildinfo
+__pycache__/
+*.pyc
+*.log
+*.tmp
+
+# Output folder: ignore scratch/QA folders, keep official presentation & summary
+output/*
+!output/Buddy_AI_Tech_Presentation_13_Slides.pptx
+!output/Buddy_Tom_tat_san_pham.docx
+!output/ppt_assets/
