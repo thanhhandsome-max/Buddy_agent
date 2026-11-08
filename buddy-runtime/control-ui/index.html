@@ -1,0 +1,474 @@
+<!doctype html>
+<html data-openclaw-control-ui-build-id="2026.11.1-b0045af35c16-2026-11-08T03-18-08.514Z-8709bdc7e8b360f4221de3923948107ec8ea46c508009d7a608f117f3d4da606" lang="en">
+  <head><script data-cfasync="false" id="openclaw-control-ui-build-info">globalThis.OPENCLAW_CONTROL_UI_BUILD_INFO={"version":"2026.11.1","commit":"b0045af35c16e2154c176527682666c860bd8dc5","builtAt":"2026-11-08T03:18:08.514Z","release":false,"commitAt":null,"branch":"main","dirty":true,"buildId":"2026.11.1-b0045af35c16-2026-11-08T03-18-08.514Z"};</script><script type="importmap" data-cfasync="false">{"imports":{"/assets/_0___________________.js":"/assets/chat-english-DxzXs0h9.js","/assets/_1____________________________________.js":"/assets/control-ui-boot-shared-styles-bwOd1x5J.js","/assets/_2_____________________________.js":"/assets/control-ui-boot-shared-BXe4S0lH.js","/assets/_3_____________________________.js":"/assets/control-ui-boot-shared-DsegYo6K.js","/assets/_4____________________________.js":"/assets/control-ui-connection-C2x7TUU8.js","/assets/_5____________________.js":"/assets/solid-runtime-Dn31IRHS.js","/assets/_0____________________________________.css":"/assets/control-ui-boot-shared-styles-BibKpD66.css","/assets/_1____________________________.css":"/assets/control-ui-connection-CVKgbZqY.css"}}</script>
+    <script data-cfasync="false">(()=>{const D={supported:["en","zh-CN","zh-TW","pt-BR","de","es","ja-JP","ko","fr","hi","ar","it","tr","uk","id","pl","th","vi","nl","fa","ru","sv","ca"],rules:[["^zh.*-hant(?:-|$)","zh-TW"],["^zh.*-hans(?:-|$)","zh-CN"],["^zh.*-(?:tw|hk|mo)(?:-|$)","zh-TW"],["^zh","zh-CN"],["^pt","pt-BR"],["^de","de"],["^es","es"],["^ja","ja-JP"],["^ko","ko"],["^fr","fr"],["^hi","hi"],["^ar","ar"],["^it","it"],["^tr","tr"],["^uk","uk"],["^id","id"],["^pl","pl"],["^th","th"],["^vi","vi"],["^nl","nl"],["^fa","fa"],["^ru","ru"],["^sv","sv"],["^ca","ca"]],rtl:["ar","fa"],fallback:"en"};let B;try{B=localStorage.getItem("openclaw.i18n.locale")}catch{}const s=(navigator.language||"").toLowerCase(),a=D.supported.includes(B)?B:D.rules.find(([e])=>new RegExp(e).test(s))?.[1]||D.fallback;document.documentElement.dir=D.rtl.includes(a)?"rtl":"ltr";const C=document.documentElement.getAttribute("data-openclaw-control-ui-base-path")||"";if(a!==D.fallback&&(location.pathname===C+"/chat"||location.pathname.startsWith(C+"/chat/"))){const e={"zh-CN":"Ka5X_ZinB2aiO5wuB67SzANqB6eDkk7gBlJ2gQjKC9EhrpyZCvbIY7wuI8svbMH0wsOc3q-LC3W5bEMNDFFcCa-UCTan6XZ1Df-U_1ke","zh-TW":"Ddb9rYlJpmr0ws0vBIAd5JdEOIYS4afBCFrvFhnlB2v38tTICcBm2294B9p2NQ4dB-75_vjYD6Qwov5R40aVEWkCDTkMSIm7DyIEA94g","pt-BR":"CSoyzoBnVABrNO0qDtimVl0wBSqQ0REQvwtVhxRZCll6YUWjC3wYzpD3D3FDY9nvD5kopJMZDI2KJJNET2iXa8P4DQiBTzs7ODCxO-Og",de:"YgZqS-HuCQVckCkMCix3Cdl7DLorth_pD4uUASa0DhMTWMYMB5xrEURAhS4LoLq7CAC9c2iHCphMmqigBkjpHArOBFuG-TttBodsCirJ",es:"D525SY0NDWNgnV1DCDTiZG9gDFVp4BP-bX1uFSjECRiEAiBTSLasyTObBz77yz_ADNFgWojPBIJotIDaDpLqgmaPD4TGS_DjB8Byuo52","ja-JP":"VDbm6MYKB6WDMr1QCiImR4SAg6wfV_oSzMVj1lpJD9yWNr-1DuoNVPvOMVKNYQNLBa3o_G0nCzS9PFFtC_LFoVgMpv4_A98BCWv0phyn",ko:"Dv3QOAXjCvJ-NVXrBr3PjslOCPFeCmuUBWN0QwtZtzMpKW8_DLY9vGKAcdwc1xCkDx9dYjguBqasmY9gCef21yonC4VX1WsYBdXajdw3",fr:"fGP_OJUcB6s6T_qFCqZApaHJFMQDsCUjHXvTnKYuDEDd2FjfBZdt5-7uBXo97BNKVUHxSIUVBGhnF067Z41lUlJNDniuMhL3DseS46VJ",hi:"HOFZnBxDCMhBlWlXhczDhulsC7Gm4rjhBXSZ1vBO_OBUK0JjDjWv4LjsCL595dKrllwBTXgjDndo5Y5iC3r7SFyyCXEznfi4CXi_WPLn",ar:"DsAh4i_8Cuzp5HmwDUX5luH3BgNUitxfDQNWNUCfCkpqEw1_D8YRlO1QDEE204pKBGEeX8EqBtfDydU7CVse6xUsBez3z16ND66kSXMV",it:"BY8U2AYID116jo4Pa3S9aj8oCrBgd-ETDbhU8jYkbcMoIxFMBTIkFwKoCzCdFKtxBt21jKtDDjOOIDWpCU2AbJyrB5Fidt9DC5Qjhqis",tr:"CiBuhyiKDDxXZKdoBIKS6erXCLNPHmGsBD5oygJj9jLnkCIcBCP-WqtaDMymDTdJCRQhlaNwDpx-3pUdC-JhkdDqBlgxZao-DyFQimsm",uk:"Ctorc7-47VEbKY6iD6BdjT0SBkg5788xDR8eYOSCCpSJ6k6_D0zmpwsdDWaFlEPkBGHcpiqEDvH-4nhHDNUwjRdam7dcfNAcCBMoiJlJ",id:"Blw5r8GtBV6A1xuDHnHSNvmnDdJfBgkiD-106JarB6RAKNqODOsFRNaiDws-jw1_B9i1ljSiBhDZpOX5CS1fa6ziC1fOCvZGbY2njIBP",pl:"BT5aFDXHxCVhAH5_DDJOdRdRB-Jf1UpaDxCayJ_HCE5t8JphCE8l2u8GD_Ai3oxEDeBgoDVCDZwdQ84A9vi4CkL4DS4L6YNWCo_Zs1Zv",th:"BNkNNGKtEwf0lKeWDhtF1okJDhwntz5mB2XZI3ZrBNuynL5yDMeNXa5HDX5AIv3kD2XPfbgzD2R0OXg4B3SKim0ACf7g5B8QaOt_C8LV",vi:"DB70NXMUBQeO_ccLDG4hWj6_D9AuI9AYCoGaKJ1LBBuF3stNC2-4P-PELx6xgROt3XhL5V2jDHuRoQx9BOv7y1rGlx-UHfB3pYpbbD1p",nl:"Caasya68BWv98Xe9UAr9xgYjCJy8WneDk1w0-dmGBHBatwiRCwhNVHctC1z4QtbbBjMCe_avB0o6rnMhARvTvKZ9PWLzSFlyC6QXQE3S",fa:"DtwBB-rd1tnne79BoErHXx5bBRo1VqsUDf29lzp4D_Xb4yJ4B4xg57DyhXqlu_LpPqc_TaIZMQrJRetnCvEdlYpa4P9jGhcTBcTyC_3K",ru:"Ca5BoHUWDVZhPLYLf7d6i5ItBj5MpnjwBK8Y1EogBuMvsrXJYQB-TXc0BMWarVSUilza-vH_CVCo_NdHBVtcdlcfuczX_Im6CdkHjcE4",sv:"yCgrICveC8Jy7biFB5FvEH9c860qs6h0D3jcvdAtCC1UTy3yCMGUj4qPDFXS3VsOCTX1EPttlm40DvY1DiWLAG69Cwk7ze3zDFfXijrC",ca:"BR2ZwLq2Jm9veTURB48D0MmMCEjaHK-IDNG7eRj9DZXKLhZRC2UwnoTrCyt3xCWSDuU-AmliBLKRwEdWC4VgYrObC87T1WpiDclfmYYv"}[a];if(e){const r=["runtimeErrors","filePreview","mcpApp","worktrees","newSession","sessionsView","mcpServers","mcpPage","profilePage","connection","attention","chat"],l=e.match(/.{8}/g).map((o,t)=>"assets/"+(t?r[t-1]==="runtimeErrors"?"locale-errors-"+a:"locale-namespace-"+a+"-"+r[t-1]:a)+"-"+o+".js");l.splice(1,0,"assets/lazy-catalog-kc9h99qw.js");for(const o of l){const t=document.createElement("link");t.rel="modulepreload",t.crossOrigin="",t.href=C+"/"+o,document.head.append(t)}}}})();</script>
+
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content"
+    />
+    <title>Buddy</title>
+    <meta name="color-scheme" content="dark light" />
+    <meta
+      id="openclaw-theme-color-light"
+      name="theme-color"
+      media="(prefers-color-scheme: light)"
+      content="#f4f4f4"
+    />
+    <meta
+      id="openclaw-theme-color-dark"
+      name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="#111318"
+    />
+    <link id="openclaw-favicon-svg" rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link
+      id="openclaw-favicon-png"
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32.png"
+    />
+    <link
+      id="openclaw-apple-touch-icon"
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.png"
+    />
+    <link
+      id="openclaw-manifest"
+      rel="manifest"
+      href="./manifest.webmanifest"
+      crossorigin="use-credentials"
+    />
+    <script data-cfasync="false">window.__OPENCLAW_NATIVE_COMMANDS_READY__=!1,globalThis.__zod_globalConfig??(globalThis.__zod_globalConfig={}),globalThis.__zod_globalConfig.jitless=!0,(function(){function n(p){var f=p.target;f.id==="openclaw-boot-styles"&&(f.media="all",document.removeEventListener("load",n,!0),document.removeEventListener("error",n,!0))}document.addEventListener("load",n,!0),document.addEventListener("error",n,!0);var E=document.documentElement.getAttribute("data-openclaw-control-ui-base-path")||"",o=location.pathname.slice(E.length)||"/",u=/^\/new\/?$/.test(o)?"new":/^\/(?:settings\/)?sessions\/?$/.test(o)?"sessions":/^\/(?:automations|cron)\/?$/.test(o)?"cron":/^\/settings(?:\/|$)/.test(o)?"settings":/^\/chat(?:\/|$)/.test(o)&&!new URLSearchParams(location.search).has("catalog")?"chat":"other";document.documentElement.setAttribute("data-openclaw-boot-route",u),document.documentElement.toggleAttribute("data-openclaw-boot-chat",u==="chat");var w={claw:1,knot:1,dash:1,absolutely:1,tide:1,beacon:1,phosphor:1,crt:1,manuscript:1,rose:1,miami:1},k={system:1,light:1,dark:1},A={dark:"claw:dark",light:"claw:light",openknot:"knot:dark",fieldmanual:"dash:dark",clawdash:"dash:light",system:"claw:system"};try{for(var d=Object.keys(localStorage),r,i=0;i<d.length&&!(d[i].indexOf("openclaw.control.settings.v1")===0&&(r=localStorage.getItem(d[i]),r));i++);var t=r?JSON.parse(r):null;t&&typeof t.navWidth=="number"&&t.navWidth>=240&&t.navWidth<=400&&document.documentElement.style.setProperty("--openclaw-boot-nav-width",t.navWidth+"px"),t&&t.chatSendShortcut==="modifier-enter"&&document.documentElement.setAttribute("data-openclaw-boot-send-shortcut","modifier");var a=t&&t.theme,l=t&&t.themeMode;typeof a!="string"&&(a=""),typeof l!="string"&&(l="");var c=A[a],h=w[a]?a:c?c.split(":")[0]:"claw",s=k[l]?l:c?c.split(":")[1]:"system";s==="system"&&(s=window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");var y={knot:["openknot","openknot-light"],dash:["dash","dash-light"],absolutely:["absolutely","absolutely-light"],tide:["tide","tide-light"],beacon:["beacon","beacon-light"],phosphor:["phosphor","phosphor-light"],crt:["crt","crt-light"],manuscript:["manuscript","manuscript-light"],rose:["rose","rose-light"],miami:["miami","miami-light"]},m=y[h],g=m?m[s==="light"?1:0]:s==="light"?"light":"dark";if(m){var _=document.documentElement.getAttribute("data-openclaw-control-ui-base-path")||"",v=document.documentElement.getAttribute("data-openclaw-control-ui-build-id"),S=v?"?v="+encodeURIComponent(v.slice(-64)):"",e=document.createElement("link");e.rel="stylesheet",e.setAttribute("blocking","render"),e.id="openclaw-theme-palette-"+h,e.onerror=function(){e.remove()},e.href=_+"/themes/"+h+".css"+S,document.head.appendChild(e)}document.documentElement.setAttribute("data-theme",g);var b=g.includes("light")?"light":"dark";document.documentElement.setAttribute("data-theme-mode",b),document.documentElement.setAttribute("data-theme-resolved",b)}catch{}})();</script>
+    <style>html,body{min-height:100%}html{color-scheme:dark;background:#111318}html[data-theme-mode=light]{color-scheme:light;background:#f4f4f4}html[data-theme=openknot]{background:#0c0c0c}html[data-theme=openknot-light]{background:#f0f0f3}html[data-theme=dash]{background:#1e1613}html[data-theme=dash-light]{background:#e8e2dc}html[data-theme=absolutely]{background:#1f1f1e}html[data-theme=absolutely-light]{background:#f3f2f1}html[data-theme=tide]{background:#14191f}html[data-theme=tide-light]{background:#edeff1}html[data-theme=beacon]{background:#050505}html[data-theme=beacon-light]{background:#f3f3f3}html[data-theme=phosphor]{background:#0e130e}html[data-theme=phosphor-light]{background:#edf0ed}html[data-theme=crt]{background:#0d0e0d}html[data-theme=crt-light]{background:#f0f0f0}html[data-theme=manuscript]{background:#25221b}html[data-theme=manuscript-light]{background:#edece6}html[data-theme=rose]{background:#1d1b28}html[data-theme=rose-light]{background:#edeae7}html[data-theme=miami]{background:#181322}html[data-theme=miami-light]{background:#f2eef1}body{background:inherit;min-height:100%;color-scheme:inherit;margin:0}openclaw-app{box-sizing:border-box;height:var(--shell-canvas-height,100dvh);padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px);display:block}.connect-splash--skeleton,.content--workbench .lazy-view-state--route{--boot-ink:var(--text,#bcbcc0);--boot-line:color-mix(in srgb, var(--boot-ink) 10%, transparent);--boot-content-bg:#0e1015}.content--workbench .lazy-view-state--route{background:var(--bg-content,var(--boot-content-bg));min-height:0;position:relative;container-type:inline-size}.connect-splash.connect-splash--skeleton{box-sizing:border-box;height:100vh;height:var(--shell-content-height,calc(100dvh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px)));background:var(--bg,inherit);opacity:1;align-items:stretch;animation:none;display:flex;position:relative;overflow:hidden}html[data-theme-mode=light] :is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route){--boot-ink:var(--text,#353535);--boot-content-bg:#f8f8f8}.connect-splash__layout{grid-template-columns:calc(var(--openclaw-boot-nav-width,258px) + 52px) minmax(0, 1fr);width:100%;height:100%;min-height:0;display:grid}.connect-splash__main{background:var(--bg-content,var(--boot-content-bg));min-width:0;height:100%;min-height:0;position:relative;container-type:inline-size}.connect-splash__sidebar{box-sizing:border-box;border-inline-end:1px solid var(--boot-line);flex-direction:column;gap:24px;padding:16px 20px 16px 72px;display:flex;position:relative}.connect-splash__sidebar:before{border-inline-end:1px solid var(--boot-line);content:"";width:51px;position:absolute;inset:0 auto 0 0}.connect-splash__new-session{height:32px;margin:8px 0}.connect-splash__sidebar>.skeleton-line:nth-child(2n){width:65%}:is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route) .skeleton{background:color-mix(in srgb, var(--boot-ink) 8%, transparent);border-radius:6px;position:relative;overflow:hidden}:is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route) .skeleton:after{content:none;animation:none}:is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route) .skeleton-line{height:14px}:is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route) .skeleton-line--medium{width:65%}:is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route) .skeleton-line--long{width:85%}.connect-splash--skeleton .connect-splash__status{color:var(--boot-ink);letter-spacing:normal;-webkit-font-smoothing:auto;text-align:center;margin:0;font:14px/20px system-ui,sans-serif;display:block;position:absolute;inset:auto 18px 50px}:is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route) .loading-skeleton{box-sizing:border-box;flex-direction:column;gap:0;width:100%;min-width:0;height:100%;min-height:0;padding:0 18px 14px;display:flex}:is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route) .loading-skeleton__header{box-sizing:border-box;padding-inline:12px;border-bottom:1px solid var(--boot-line,var(--border));flex:none;align-items:center;gap:14px;height:44px;margin-inline:-18px;padding-bottom:0;display:flex}:is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route) .loading-skeleton__avatar{border-radius:50%;flex:none;width:32px;height:32px}:is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route) .loading-skeleton__title{width:140px}:is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route) .loading-skeleton__messages{flex-direction:column;flex:1;gap:48px;width:min(100%,48rem);margin:28px auto 0;display:flex}:is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route) .loading-skeleton__message{gap:14px;width:85%;display:grid}:is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route) .loading-skeleton__message--user{align-self:flex-end;width:48%}:is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route) .loading-skeleton__composer{box-sizing:border-box;border:1px solid var(--boot-line,var(--border));border-radius:20px;flex:none;width:min(100%,48rem);height:92px;margin:8px auto 0}html:not([data-openclaw-boot-chat]) #openclaw-boot-composer{display:none}html[data-openclaw-boot-chat] :is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route) .loading-skeleton__composer:has(>#openclaw-boot-composer){background:var(--chat-composer-surface,color-mix(in srgb, var(--boot-ink) 14%, var(--bg-content,var(--boot-content-bg))));height:auto}html[data-openclaw-boot-chat][data-theme-mode=light] :is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route) .loading-skeleton__composer:has(>#openclaw-boot-composer){background:var(--chat-composer-surface,color-mix(in srgb, var(--bg-content,var(--boot-content-bg)) 50%, white))}#openclaw-boot-composer{box-sizing:border-box;field-sizing:content;border-radius:inherit;width:100%;min-height:86px;max-height:188px;color:var(--boot-ink);letter-spacing:normal;-webkit-font-smoothing:auto;resize:none;background:0 0;border:0;outline:none;margin:0;padding:12px 14px 50px;font:14px/21px system-ui,sans-serif;display:block}#openclaw-boot-composer::placeholder,#openclaw-boot-composer[data-submit-queued]{color:color-mix(in srgb, var(--boot-ink) 55%, transparent);opacity:1}.connect-splash[data-chat] .connect-splash__status{bottom:132px}.connect-splash__main:has(>.loading-skeleton #openclaw-boot-composer:not(:placeholder-shown))>.connect-splash__status{visibility:hidden}@media (width<=900px){:is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route) .loading-skeleton:has(#openclaw-boot-composer:focus,.loading-skeleton__content){padding-bottom:10px}}@media (width<=900px),(width<=932px) and (height<=500px) and (orientation:landscape){html:not(.openclaw-native-macos,.openclaw-native-nav,.openclaw-native-web-chrome) :is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route) .loading-skeleton:has(#openclaw-boot-composer:focus,.loading-skeleton__content){padding-bottom:10px}}@media (width<=932px) and (height<=500px) and (orientation:landscape){html:not(.openclaw-native-macos,.openclaw-native-nav,.openclaw-native-web-chrome) :is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route) .loading-skeleton:has(#openclaw-boot-composer){padding-inline:16px;container:chat-composer/inline-size}@container chat-composer (width<=560px){html[data-openclaw-boot-chat]:not(.openclaw-native-macos,.openclaw-native-nav,.openclaw-native-web-chrome) :is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route) .loading-skeleton:has(#openclaw-boot-composer:focus)>.loading-skeleton__messages:not(.loading-skeleton__content){min-height:0;overflow:hidden}html[data-openclaw-boot-chat]:not(.openclaw-native-macos,.openclaw-native-nav,.openclaw-native-web-chrome) :is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route) .loading-skeleton:has(#openclaw-boot-composer:focus,.loading-skeleton__content) .loading-skeleton__composer:has(>#openclaw-boot-composer){overscroll-behavior:contain;max-height:min(36vh,164px);padding:6px 0 48px;overflow:hidden auto}html[data-openclaw-boot-chat]:not(.openclaw-native-macos,.openclaw-native-nav,.openclaw-native-web-chrome) :is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route) .loading-skeleton:has(#openclaw-boot-composer:focus,.loading-skeleton__content) .loading-skeleton__composer>#openclaw-boot-composer{min-height:48px;max-height:56px;padding:6px 14px;overflow-y:auto}}@container chat-composer (width>560px){html[data-openclaw-boot-chat]:not(.openclaw-native-macos,.openclaw-native-nav,.openclaw-native-web-chrome) :is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route) .loading-skeleton:has(#openclaw-boot-composer:focus,.loading-skeleton__content) .loading-skeleton__composer:has(>#openclaw-boot-composer){min-height:112px;padding:6px 0 48px}html[data-openclaw-boot-chat]:not(.openclaw-native-macos,.openclaw-native-nav,.openclaw-native-web-chrome) :is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route) .loading-skeleton:has(#openclaw-boot-composer:focus,.loading-skeleton__content) .loading-skeleton__composer>#openclaw-boot-composer{min-height:48px;max-height:56px;padding:10px 12px;overflow-y:auto}}}@media (width<=768px){#openclaw-boot-composer{min-height:50px;max-height:50px;padding:13px 16px 0 42px;line-height:24px}html[data-openclaw-boot-chat] :is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route) .loading-skeleton__composer:has(>#openclaw-boot-composer:focus){border-radius:20px}#openclaw-boot-composer:focus,.loading-skeleton:has(.loading-skeleton__content) #openclaw-boot-composer{min-height:90px;max-height:192px;padding:12px 14px 54px;line-height:21px}}@media (pointer:coarse){#openclaw-boot-composer{font-size:16px;line-height:24px}}@media (pointer:coarse) and (width<=768px){#openclaw-boot-composer:focus{max-height:210px;line-height:24px}}@media (width>=769px){html[data-openclaw-boot-chat] #openclaw-boot-shell .loading-skeleton__composer,.connect-splash[data-chat] .loading-skeleton__composer,.content--workbench .lazy-view-state--route .loading-skeleton__composer{height:max(var(--chat-composer-min-height,88px), calc(var(--chat-composer-editor-line,calc(var(--control-ui-text-md,14px) * 1.5)) + var(--chat-composer-editor-inset-block,6px) * 5 + var(--chat-composer-send-size,32px) + 4px + 2px))}}:is(html[data-openclaw-boot-route=new] #openclaw-boot-shell,.connect-splash[data-route=new]) .loading-skeleton{padding-top:calc(clamp(44px,5vh,52px) + clamp(20px,4vh,40px));padding-inline:36px}:is(html[data-openclaw-boot-route=new] #openclaw-boot-shell,.connect-splash[data-route=new]) .loading-skeleton__header{border:0;flex-direction:column;gap:12px;height:auto;margin:0;padding:0}:is(html[data-openclaw-boot-route=new] #openclaw-boot-shell,.connect-splash[data-route=new]) .loading-skeleton__header .loading-skeleton__avatar{width:96px;height:96px}:is(html[data-openclaw-boot-route=new] #openclaw-boot-shell,.connect-splash[data-route=new]) .loading-skeleton__title{width:160px;height:30px}:is(html[data-openclaw-boot-route=new] #openclaw-boot-shell,.connect-splash[data-route=new]) .loading-skeleton__messages{flex:none;gap:0;margin-top:6px}:is(html[data-openclaw-boot-route=new] #openclaw-boot-shell,.connect-splash[data-route=new]) .loading-skeleton__message--user{align-self:center;justify-items:center;gap:44px;width:100%}:is(html[data-openclaw-boot-route=new] #openclaw-boot-shell,.connect-splash[data-route=new]) .loading-skeleton__message--user>:first-child{width:min(100%,280px);height:20px}:is(html[data-openclaw-boot-route=new] #openclaw-boot-shell,.connect-splash[data-route=new]) .loading-skeleton__message--user>:last-child{width:100%;height:32px}:is(html[data-openclaw-boot-route=new] #openclaw-boot-shell,.connect-splash[data-route=new]) .loading-skeleton__message:not(.loading-skeleton__message--user){display:none}:is(html[data-openclaw-boot-route=new] #openclaw-boot-shell,.connect-splash[data-route=new]) .loading-skeleton__composer{border-radius:12px;height:144px}:is(html[data-openclaw-boot-route=settings] #openclaw-boot-shell,.connect-splash[data-route=settings]) .connect-splash__layout{grid-template-columns:288px minmax(0,1fr)}:is(html[data-openclaw-boot-route=settings] #openclaw-boot-shell,.connect-splash[data-route=settings]) .connect-splash__sidebar{padding-inline-start:20px}:is(html[data-openclaw-boot-route=settings] #openclaw-boot-shell,.connect-splash[data-route=settings]) .connect-splash__sidebar:before{display:none}:is(html[data-openclaw-boot-route=settings] #openclaw-boot-shell,.connect-splash[data-route=settings],html[data-openclaw-boot-route=sessions] #openclaw-boot-shell,.connect-splash[data-route=sessions],html[data-openclaw-boot-route=cron] #openclaw-boot-shell,.connect-splash[data-route=cron]) .loading-skeleton{padding:6px 20px 32px}:is(html[data-openclaw-boot-route=settings] #openclaw-boot-shell,.connect-splash[data-route=settings],html[data-openclaw-boot-route=sessions] #openclaw-boot-shell,.connect-splash[data-route=sessions],html[data-openclaw-boot-route=cron] #openclaw-boot-shell,.connect-splash[data-route=cron]) .loading-skeleton__header{border:0;justify-content:center;width:min(100%,1120px);height:40px;margin:0 auto;padding:0}:is(html[data-openclaw-boot-route=settings] #openclaw-boot-shell,.connect-splash[data-route=settings],html[data-openclaw-boot-route=sessions] #openclaw-boot-shell,.connect-splash[data-route=sessions],html[data-openclaw-boot-route=cron] #openclaw-boot-shell,.connect-splash[data-route=cron]) .loading-skeleton__header .loading-skeleton__avatar,:is(html[data-openclaw-boot-route=settings] #openclaw-boot-shell,.connect-splash[data-route=settings],html[data-openclaw-boot-route=sessions] #openclaw-boot-shell,.connect-splash[data-route=sessions],html[data-openclaw-boot-route=cron] #openclaw-boot-shell,.connect-splash[data-route=cron]) .loading-skeleton__message .loading-skeleton__avatar,:is(html[data-openclaw-boot-route=settings] #openclaw-boot-shell,.connect-splash[data-route=settings],html[data-openclaw-boot-route=sessions] #openclaw-boot-shell,.connect-splash[data-route=sessions],html[data-openclaw-boot-route=cron] #openclaw-boot-shell,.connect-splash[data-route=cron]) .loading-skeleton__composer{display:none}:is(html[data-openclaw-boot-route=settings] #openclaw-boot-shell,.connect-splash[data-route=settings],html[data-openclaw-boot-route=sessions] #openclaw-boot-shell,.connect-splash[data-route=sessions],html[data-openclaw-boot-route=cron] #openclaw-boot-shell,.connect-splash[data-route=cron]) .loading-skeleton__title{width:180px;height:26px}:is(html[data-openclaw-boot-route=settings] #openclaw-boot-shell,.connect-splash[data-route=settings],html[data-openclaw-boot-route=sessions] #openclaw-boot-shell,.connect-splash[data-route=sessions],html[data-openclaw-boot-route=cron] #openclaw-boot-shell,.connect-splash[data-route=cron]) .loading-skeleton__messages{flex:none;gap:24px;width:min(100%,1120px);margin-top:32px}:is(html[data-openclaw-boot-route=settings] #openclaw-boot-shell,.connect-splash[data-route=settings],html[data-openclaw-boot-route=sessions] #openclaw-boot-shell,.connect-splash[data-route=sessions],html[data-openclaw-boot-route=cron] #openclaw-boot-shell,.connect-splash[data-route=cron]) .loading-skeleton__message{gap:24px;width:100%}:is(html[data-openclaw-boot-route=settings] #openclaw-boot-shell,.connect-splash[data-route=settings],html[data-openclaw-boot-route=sessions] #openclaw-boot-shell,.connect-splash[data-route=sessions],html[data-openclaw-boot-route=cron] #openclaw-boot-shell,.connect-splash[data-route=cron]) .loading-skeleton__message--user{align-self:stretch}:is(html[data-openclaw-boot-route=settings] #openclaw-boot-shell,.connect-splash[data-route=settings]) .loading-skeleton{padding:44px clamp(28px,5vw,72px) 32px}:is(html[data-openclaw-boot-route=settings] #openclaw-boot-shell,.connect-splash[data-route=settings]) .loading-skeleton__header{justify-content:flex-start}@container (width>=1200px){html[data-openclaw-boot-chat] #openclaw-boot-shell .loading-skeleton,.connect-splash[data-chat] .loading-skeleton,.content--workbench .lazy-view-state--route .loading-skeleton{padding-inline-end:331px}html[data-openclaw-boot-chat] #openclaw-boot-shell .loading-skeleton__header,.connect-splash[data-chat] .loading-skeleton__header,.content--workbench .lazy-view-state--route .loading-skeleton__header{margin-inline-end:-331px}.connect-splash[data-chat] .connect-splash__status{inset-inline-end:331px}}@media (width<=900px),(width<=932px) and (height<=500px) and (orientation:landscape){.connect-splash__layout,:is(html[data-openclaw-boot-route=settings] #openclaw-boot-shell,.connect-splash[data-route=settings]) .connect-splash__layout{grid-template-columns:minmax(0,1fr)}.connect-splash__sidebar{display:none}.connect-splash--skeleton .connect-splash__status{inset-inline-start:18px}}@media (width<=768px){:is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route) .loading-skeleton{padding:0 16px 10px}:is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route) .loading-skeleton__header{height:58px;margin-inline:-16px}:is(.connect-splash--skeleton,.content--workbench .lazy-view-state--route) .loading-skeleton__composer{border-radius:22px;height:52px}.connect-splash--skeleton .connect-splash__status{bottom:26px}.connect-splash[data-chat] .connect-splash__status{bottom:112px}}@media (width<=768px),(width<=932px) and (height<=500px) and (orientation:landscape){:is(html[data-openclaw-boot-route=new] #openclaw-boot-shell,.connect-splash[data-route=new]) .loading-skeleton{justify-content:center;padding:76px 18px 24px}:is(html[data-openclaw-boot-route=new] #openclaw-boot-shell,.connect-splash[data-route=new]) .loading-skeleton__header .loading-skeleton__avatar{width:56px;height:56px}:is(html[data-openclaw-boot-route=new] #openclaw-boot-shell,.connect-splash[data-route=new]) .loading-skeleton__title{height:24px}:is(html[data-openclaw-boot-route=new] #openclaw-boot-shell,.connect-splash[data-route=new]) .loading-skeleton__message--user{gap:24px}}@media (width<=768px) and (height<=500px),(width<=932px) and (height<=500px) and (orientation:landscape){:is(html[data-openclaw-boot-route=new] #openclaw-boot-shell,.connect-splash[data-route=new]) .loading-skeleton{padding-top:64px}:is(html[data-openclaw-boot-route=new] #openclaw-boot-shell,.connect-splash[data-route=new]) .loading-skeleton__header{flex-direction:row;justify-content:center}:is(html[data-openclaw-boot-route=new] #openclaw-boot-shell,.connect-splash[data-route=new]) .loading-skeleton__header .loading-skeleton__avatar{width:36px;height:36px}:is(html[data-openclaw-boot-route=new] #openclaw-boot-shell,.connect-splash[data-route=new]) .loading-skeleton__message--user>:first-child{display:none}}body.openclaw-mount-fallback-active{--mount-fallback-bg:var(--bg-content,#0e1015);--mount-fallback-sidebar:#121419;--mount-fallback-rail:#15171c;--mount-fallback-rail-edge:#1f2126;--mount-fallback-divider:#36373c;--mount-fallback-edge:#1d1f24;--mount-fallback-text:var(--text-strong,#f4f4f5);--mount-fallback-heading:var(--text,#bcbcc0);--mount-fallback-muted:var(--muted,#8e8e97);--mount-fallback-glyph:#bcbcc07b;--mount-fallback-selected:#222429;--mount-fallback-skeleton:#8e8e971a;--mount-fallback-skeleton-strong:#8e8e971f;--mount-fallback-placeholder:#8e8e9729;--mount-fallback-placeholder-strong:#8e8e9733;--mount-fallback-accent:#ff5c5c;--mount-fallback-tile:#1c1e23;--mount-fallback-tile-border:#23252a;--mount-fallback-link:var(--link,#ff7070);--mount-fallback-ring:var(--ring,#ff5c5c);--mount-fallback-ground:radial-gradient(closest-side, #0000006b, #00000029 60%, transparent);color:var(--mount-fallback-text);background:var(--mount-fallback-bg);font-family:var(--font-body,ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif);-webkit-font-smoothing:antialiased;margin:0}body.openclaw-mount-fallback-active openclaw-app{display:none}.mount-fallback{box-sizing:border-box;background:var(--mount-fallback-bg);grid-template-columns:310px minmax(0,1fr);height:100dvh}.mount-fallback:not([hidden]){display:grid}.mount-fallback__shell{border-inline-end:1px solid var(--mount-fallback-edge);background:var(--mount-fallback-sidebar);min-height:0;display:flex}.mount-fallback__rail{box-sizing:border-box;border-inline-end:.5px solid var(--mount-fallback-rail-edge);background:var(--mount-fallback-rail);width:52px;color:var(--mount-fallback-glyph);flex-direction:column;flex:none;align-items:center;gap:8px;padding:4px 4px 8px;display:flex}.mount-fallback__rail-item{border-radius:12.5px;flex:none;place-items:center;width:36px;height:36px;display:grid}.mount-fallback__rail-item svg{width:19px;height:19px}.mount-fallback__rail-disc{background:var(--mount-fallback-placeholder-strong);border-radius:50%;width:26px;height:26px}.mount-fallback__rail-item.is-selected{background:color-mix(in srgb, var(--mount-fallback-selected) 50%, transparent);color:color-mix(in srgb, var(--mount-fallback-text) 60%, transparent)}.mount-fallback__rail-item.is-muted{opacity:.4}.mount-fallback__rail-create{border-bottom:.5px solid var(--mount-fallback-divider);flex:none;justify-content:center;width:36px;padding-bottom:8px;display:flex}.mount-fallback__rail-new{background:var(--mount-fallback-skeleton-strong);width:30px;height:30px;color:var(--mount-fallback-glyph);border-radius:12.5px;place-items:center;margin:3px 0;display:grid}.mount-fallback__rail-new svg{width:19px;height:19px}.mount-fallback__rail-bottom{margin-top:auto}.mount-fallback__rail-avatar{place-items:center;width:36px;height:36px;display:grid}.mount-fallback__rail-avatar:before{content:"";background:var(--mount-fallback-placeholder);border-radius:50%;width:28px;height:28px}.mount-fallback__skeleton{flex:1;min-width:0;padding:12px 4px}.mount-fallback__side-brand{width:auto;height:20px;color:var(--mount-fallback-text);margin-inline-start:8.6px;display:block}.mount-fallback__skeleton-rows{margin-top:16px;display:grid}.mount-fallback__skeleton-row{align-items:center;gap:9px;height:32px;padding-inline:11px 8px;display:flex}.mount-fallback__skeleton-row:before,.mount-fallback__skeleton-row span{background:var(--mount-fallback-skeleton);display:block}.mount-fallback__skeleton-row:before{content:"";background:var(--mount-fallback-skeleton-strong);border-radius:50%;flex:none;width:18px;height:18px}.mount-fallback__skeleton-row span{border-radius:9999px;height:10px}.mount-fallback__skeleton-row:first-child span{width:68%}.mount-fallback__skeleton-row:nth-child(2) span{width:50%}.mount-fallback__skeleton-row:nth-child(3) span{width:78%}.mount-fallback__skeleton-row:nth-child(4) span{width:58%}.mount-fallback__main{flex-direction:column;min-width:0;min-height:0;display:flex;overflow-y:auto}.mount-fallback__topbar{height:53px;color:var(--mount-fallback-text);flex:none;align-items:center;padding:0 12px;display:flex}.mount-fallback__wordmark{visibility:hidden;width:105px;height:32px;display:block}.mount-fallback__stage{flex:1}.mount-fallback__main{position:relative}.mount-fallback__panel{box-sizing:border-box;text-align:center;width:min(460px,100% - 48px);position:absolute;top:38%;left:50%;transform:translate(-50%)}.mount-fallback__mascot{--mascot-size:88px;--mascot-gx:0px;--mascot-gy:0px;top:calc(-24px - var(--mascot-size));width:var(--mascot-size);height:var(--mascot-size);pointer-events:none;position:absolute;left:50%;transform:translate(-50%)}.mount-fallback__mascot-ground{background:var(--mount-fallback-ground);border-radius:50%;width:62px;height:9px;margin-left:-31px;position:absolute;bottom:0;left:50%}.mount-fallback__mascot-figure{aspect-ratio:124/112;width:100%;height:auto;display:block;position:absolute;top:0;left:0;overflow:visible}.mount-fallback__mascot-eyes{transform:translate(var(--mascot-gx), var(--mascot-gy));transition:transform .5s cubic-bezier(.3,0,.2,1)}.mount-fallback__mascot-lids{transform-origin:60px 35px}.mount-fallback__mascot-claw-left{transform-origin:28px 52px}.mount-fallback__mascot-claw-right{transform-origin:92px 52px}.mount-fallback[data-recovery=stopped] .mount-fallback__mascot{--mascot-gy:2.8px}.mount-fallback:not([data-recovery=stopped]) .mount-fallback__mascot-figure{animation:2.6s cubic-bezier(.45,0,.55,1) infinite alternate mount-fallback-bob}.mount-fallback:not([data-recovery=stopped]) .mount-fallback__mascot-ground{animation:2.6s cubic-bezier(.45,0,.55,1) infinite alternate mount-fallback-ground}.mount-fallback:not([data-recovery=stopped]) .mount-fallback__mascot-claw-left{animation:2.6s cubic-bezier(.45,0,.55,1) infinite alternate mount-fallback-pinch-left}.mount-fallback:not([data-recovery=stopped]) .mount-fallback__mascot-claw-right{animation:2.6s cubic-bezier(.45,0,.55,1) infinite alternate mount-fallback-pinch-right}.mount-fallback:not([data-recovery=stopped]) .mount-fallback__mascot-eyes{animation:4.8s cubic-bezier(.45,0,.2,1) infinite mount-fallback-gaze}.mount-fallback:not([data-recovery=stopped]) .mount-fallback__mascot-lids{animation:4.8s linear infinite mount-fallback-blink}@keyframes mount-fallback-bob{to{transform:translateY(-5px)}}@keyframes mount-fallback-ground{to{opacity:.7;transform:scaleX(.82)}}@keyframes mount-fallback-pinch-left{to{transform:rotate(-7deg)}}@keyframes mount-fallback-pinch-right{to{transform:rotate(7deg)}}@keyframes mount-fallback-gaze{0%,8%,82%,to{transform:translate(0)}18%,40%{transform:translate(-3.2px,.6px)}50%,72%{transform:translate(3.2px,.6px)}}@keyframes mount-fallback-blink{0%,90%,96%,to{transform:scaleY(1)}93%{transform:scaleY(.12)}}.mount-fallback__panel h1{color:var(--mount-fallback-text);letter-spacing:-.01em;text-wrap:balance;margin:0;font-size:22px;font-weight:600;line-height:28px}.mount-fallback__panel p{color:var(--mount-fallback-muted);text-wrap:pretty;margin:6px 0 0;font-size:14px;line-height:21px}.mount-fallback__panel a{color:var(--mount-fallback-muted);text-underline-offset:.18em;font-size:14px;text-decoration-thickness:.08em}@media (hover:hover){.mount-fallback__panel a:hover{color:var(--mount-fallback-text)}}.mount-fallback__actions{flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;min-height:32px;margin-top:20px;display:flex}.mount-fallback__panel .mount-fallback__help{align-items:center;gap:6px;width:max-content;margin:32px auto 0;font-size:13px;line-height:16px;text-decoration:none;display:flex}.mount-fallback__help svg{flex:none;width:14px;height:14px}.mount-fallback__panel .mount-fallback__help[hidden],.mount-fallback:not([data-recovery=stopped]) .mount-fallback__panel .mount-fallback__help{display:none}.mount-fallback__button{appearance:none;height:32px;color:inherit;background:color-mix(in srgb, var(--mount-fallback-text) 6%, var(--mount-fallback-bg));font:inherit;cursor:default;border:0;border-radius:12px;padding:0 14px;font-size:13px;font-weight:500;line-height:1;transition:background .12s}@media (hover:hover){.mount-fallback__button:hover{background:color-mix(in srgb, var(--mount-fallback-text) 9%, var(--mount-fallback-bg))}}.mount-fallback__button:active{background:color-mix(in srgb, var(--mount-fallback-text) 16%, var(--mount-fallback-bg))}.mount-fallback__button--primary{color:var(--primary-foreground,#fff);background:var(--primary,#d13c3c)}.mount-fallback__button--primary:active{background:var(--primary-hover,#c22e2e)}@media (hover:hover){.mount-fallback__button--primary:hover{background:var(--primary-hover,#c22e2e)}}.mount-fallback__panel:focus{outline:none}.mount-fallback__button:focus-visible,.mount-fallback__panel a:focus-visible{outline:2px solid var(--mount-fallback-ring);outline-offset:3px}html[data-theme-mode=light] body.openclaw-mount-fallback-active{--mount-fallback-bg:var(--bg-content,#f8f8f8);--mount-fallback-sidebar:#f4f4f4;--mount-fallback-rail:#f0f0f0;--mount-fallback-rail-edge:#ebebeb;--mount-fallback-divider:#d1d1d1;--mount-fallback-edge:#ededed;--mount-fallback-text:var(--text-strong,#202020);--mount-fallback-heading:var(--text,#353535);--mount-fallback-muted:var(--muted,#5e5e5e);--mount-fallback-glyph:#35353599;--mount-fallback-selected:#e5e5e5;--mount-fallback-skeleton:#5e5e5e1a;--mount-fallback-skeleton-strong:#5e5e5e1f;--mount-fallback-placeholder:#5e5e5e29;--mount-fallback-placeholder-strong:#5e5e5e33;--mount-fallback-accent:#bd4531;--mount-fallback-tile:#fcfcfc;--mount-fallback-tile-border:#eaeaea;--mount-fallback-link:var(--link,#ad3623);--mount-fallback-ring:var(--ring,#bd4531);--mount-fallback-ground:radial-gradient(closest-side, #20202029, #2020200f 60%, transparent)}html[data-theme-mode=light] .mount-fallback__button--primary{background:var(--primary,#bd4531)}html[data-theme-mode=light] .mount-fallback__button--primary:active{background:var(--primary-hover,#a83c29)}@media (hover:hover){html[data-theme-mode=light] .mount-fallback__button--primary:hover{background:var(--primary-hover,#a83c29)}}@media (width<=768px){.mount-fallback{grid-template-columns:minmax(0,1fr)}.mount-fallback__shell{display:none}.mount-fallback__topbar{padding-top:max(14.5px, env(safe-area-inset-top));justify-content:center;align-items:flex-start}.mount-fallback__wordmark{visibility:visible}.mount-fallback__panel{width:auto;top:36%;left:24px;right:24px;transform:none}.mount-fallback__panel h1{font-size:20px;line-height:26px}.mount-fallback__mascot{--mascot-size:80px}}@media (width<=768px),(pointer:coarse){.mount-fallback__button{border-radius:13px;height:36px;padding:0 16px;font-size:14px}}@media (prefers-reduced-motion:reduce){.mount-fallback__button{transition:none}.mount-fallback:not([data-recovery=stopped]) .mount-fallback__mascot-eyes{animation-duration:12s}.mount-fallback__mascot-figure,.mount-fallback__mascot-ground,.mount-fallback__mascot-claw-left,.mount-fallback__mascot-claw-right,.mount-fallback .mount-fallback__mascot-lids{animation:none!important}}</style>
+    <script data-cfasync="false" type="module" crossorigin src="./assets/index-CXIv9PZU.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-CNOWq4Kh.js">
+    <link rel="modulepreload" crossorigin href="./assets/control-ui-connection-C2x7TUU8.js">
+    <link rel="preload" as="style" crossorigin href="./assets/control-ui-connection-CVKgbZqY.css"><link rel="stylesheet" crossorigin href="./assets/control-ui-connection-CVKgbZqY.css" id="openclaw-boot-styles" media="print">
+    <template data-openclaw-route-preloads="chat">      <link rel="modulepreload" crossorigin="" href="./assets/device-signing-runtime-skIc9Hew.js">
+      <link rel="modulepreload" crossorigin="" href="./assets/chat-route-entry-CsyQOEjq.js">
+      <link rel="modulepreload" crossorigin="" href="./assets/control-ui-boot-shared-styles-bwOd1x5J.js">
+      <link rel="modulepreload" crossorigin="" href="./assets/control-ui-boot-shared-BXe4S0lH.js">
+      <link rel="modulepreload" crossorigin="" href="./assets/solid-runtime-Dn31IRHS.js">
+      <link rel="modulepreload" crossorigin="" href="./assets/chat-english-DxzXs0h9.js">
+      <link rel="preload" as="style" crossorigin="" href="./assets/control-ui-boot-shared-styles-BibKpD66.css">
+      <link rel="modulepreload" crossorigin="" href="./assets/control-ui-boot-chat-DDg2pvCY.js">
+      <link rel="modulepreload" crossorigin="" href="./assets/deferred-ui-support-SbQoWn6f.js">
+      <link rel="modulepreload" crossorigin="" href="./assets/markdown-runtime-By-XazmO.js">
+      <link rel="modulepreload" crossorigin="" href="./assets/control-ui-boot-chat-styles-BbEKJeuj.js">
+      <link rel="preload" as="style" crossorigin="" href="./assets/control-ui-boot-chat-styles-C0w87Vu1.css">
+      <link rel="modulepreload" crossorigin="" href="./assets/chat-message-media-runtime-Dqu9pU3r.js">
+      <link rel="modulepreload" crossorigin="" href="./assets/virtual-core-runtime-LhyriIY5.js">
+      <link rel="preload" as="script" fetchpriority="low" crossorigin="" href="./assets/app-sidebar-online-vWFyAOCW.js">
+      <link rel="preload" as="script" fetchpriority="low" crossorigin="" href="./assets/chat-interaction-runtime-C8EAjicL.js">
+      <link rel="preload" as="script" fetchpriority="low" crossorigin="" href="./assets/chat-live-events-runtime-B0H-tgaa.js">
+      <link rel="preload" as="script" fetchpriority="low" crossorigin="" href="./assets/composer-invocation-menus-Dr5UbLjm.js">
+      <link rel="preload" as="script" fetchpriority="low" crossorigin="" href="./assets/markdown-streaming-runtime-CF1Sqn5i.js">
+</template>
+    <template data-openclaw-route-preloads="new">      <link rel="modulepreload" crossorigin="" href="./assets/device-signing-runtime-skIc9Hew.js">
+      <link rel="modulepreload" crossorigin="" href="./assets/new-session-page-entry-BdPDT0zu.js">
+      <link rel="modulepreload" crossorigin="" href="./assets/control-ui-boot-new-CUA_YcFP.js">
+      <link rel="modulepreload" crossorigin="" href="./assets/control-ui-boot-shared-BXe4S0lH.js">
+      <link rel="modulepreload" crossorigin="" href="./assets/solid-runtime-Dn31IRHS.js">
+      <link rel="modulepreload" crossorigin="" href="./assets/control-ui-boot-shared-styles-bwOd1x5J.js">
+      <link rel="preload" as="style" crossorigin="" href="./assets/control-ui-boot-shared-styles-BibKpD66.css">
+      <link rel="modulepreload" crossorigin="" href="./assets/chat-english-DxzXs0h9.js">
+      <link rel="modulepreload" crossorigin="" href="./assets/route-controls-runtime-CL9NeYAP.js">
+      <link rel="modulepreload" crossorigin="" href="./assets/control-ui-boot-new-styles-cERH1DEF.js">
+      <link rel="preload" as="style" crossorigin="" href="./assets/control-ui-boot-new-styles-DGwk-qp-.css">
+      <link rel="modulepreload" crossorigin="" href="./assets/composer-invocation-menus-Dr5UbLjm.js">
+      <link rel="modulepreload" crossorigin="" href="./assets/session-placement-startup.runtime-rk8JHouE.js">
+      <link rel="preload" as="script" fetchpriority="low" crossorigin="" href="./assets/app-sidebar-online-vWFyAOCW.js">
+</template>
+    <meta id="openclaw-navigation-preloads" content="assets/navigation-preloads-BaC0jvfr.json">
+  </head>
+  <body>
+    <openclaw-app>
+      <main
+        id="openclaw-boot-shell"
+        class="connect-splash connect-splash--skeleton"
+        role="status"
+        aria-label="Loading"
+      >
+        <div class="connect-splash__layout">
+          <aside class="connect-splash__sidebar" aria-hidden="true">
+            <div class="skeleton loading-skeleton__avatar"></div>
+            <div class="skeleton connect-splash__new-session"></div>
+            <div class="skeleton skeleton-line"></div>
+            <div class="skeleton skeleton-line"></div>
+            <div class="skeleton skeleton-line"></div>
+            <div class="skeleton skeleton-line"></div>
+            <div class="skeleton skeleton-line"></div>
+            <div class="skeleton skeleton-line"></div>
+          </aside>
+          <div class="connect-splash__main">
+            <div class="loading-skeleton">
+              <div class="loading-skeleton__header" aria-hidden="true">
+                <div class="skeleton loading-skeleton__avatar"></div>
+                <div class="skeleton skeleton-line loading-skeleton__title"></div>
+              </div>
+              <div class="loading-skeleton__messages" aria-hidden="true">
+                <div class="loading-skeleton__message loading-skeleton__message--user">
+                  <div class="skeleton skeleton-line"></div>
+                  <div class="skeleton skeleton-line skeleton-line--medium"></div>
+                </div>
+                <div class="loading-skeleton__message">
+                  <div class="skeleton loading-skeleton__avatar"></div>
+                  <div class="skeleton skeleton-line"></div>
+                  <div class="skeleton skeleton-line skeleton-line--long"></div>
+                  <div class="skeleton skeleton-line skeleton-line--medium"></div>
+                </div>
+              </div>
+              <div class="skeleton loading-skeleton__composer">
+                <textarea
+                  id="openclaw-boot-composer"
+                  rows="1"
+                  dir="auto"
+                  enterkeyhint="enter"
+                  placeholder="Message…"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </openclaw-app>
+    <script data-cfasync="false">(function(){var a=document.documentElement,t=document.getElementById("openclaw-boot-composer");if(!(!t||!a.hasAttribute("data-openclaw-boot-chat"))){var o=navigator,i=/iPad|iPhone|iPod|Android/.test(o.userAgent)||o.platform==="MacIntel"&&o.maxTouchPoints>1,u=a.hasAttribute("data-openclaw-boot-send-shortcut"),n=-1;t.addEventListener("compositionend",function(e){n=e.timeStamp}),t.addEventListener("keydown",function(e){e.key!=="Enter"||e.shiftKey||i||e.isComposing||e.keyCode===229||n>=0&&Math.abs(e.timeStamp-n)<100||u&&!e.metaKey&&!e.ctrlKey||(e.preventDefault(),t.toggleAttribute("data-submit-queued",t.value.trim()!==""))}),t.addEventListener("input",function(){t.removeAttribute("data-submit-queued")}),t.addEventListener("focus",function(){t.setAttribute("data-focused","")}),t.addEventListener("blur",function(){setTimeout(function(){t.isConnected&&document.activeElement!==t&&t.removeAttribute("data-focused")},0)})}})();</script>
+    <section
+      id="openclaw-mount-fallback"
+      class="mount-fallback"
+      data-openclaw-mount-timeout-ms="12000"
+      role="alert"
+      aria-labelledby="openclaw-mount-fallback-title"
+      hidden
+    >
+      <div class="mount-fallback__shell" aria-hidden="true">
+        <div class="mount-fallback__rail">
+          <span class="mount-fallback__rail-item"
+            ><span class="mount-fallback__rail-disc"></span
+          ></span>
+          <span class="mount-fallback__rail-create"
+            ><span class="mount-fallback__rail-new"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h14M12 5v14" /></svg></span
+          ></span>
+          <span class="mount-fallback__rail-item"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect width="7" height="7" x="3" y="3" rx="1" />
+              <rect width="7" height="7" x="14" y="3" rx="1" />
+              <rect width="7" height="7" x="14" y="14" rx="1" />
+              <rect width="7" height="7" x="3" y="14" rx="1" /></svg
+          ></span>
+          <span class="mount-fallback__rail-item is-selected"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"
+              /></svg
+          ></span>
+          <span class="mount-fallback__rail-item"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg
+          ></span>
+          <span class="mount-fallback__rail-item"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.3-4.3" /></svg
+          ></span>
+          <span class="mount-fallback__rail-item is-muted mount-fallback__rail-bottom"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" /></svg
+          ></span>
+          <span class="mount-fallback__rail-item is-muted"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="22 12 16 12 14 15 10 15 8 12 2 12" />
+              <path
+                d="m5.45 5.11-3.45 6.89v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89a2 2 0 0 0-1.79-1.11h-9.52a2 2 0 0 0-1.79 1.11z"
+              /></svg
+          ></span>
+          <span class="mount-fallback__rail-avatar"></span>
+        </div>
+        <div class="mount-fallback__skeleton">
+          <svg
+            class="mount-fallback__side-brand"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="15 12 757 142"
+            fill="none"
+          >
+            <g transform="translate(95.76 80.4) scale(1.01) translate(-95.76 -80.4)">
+              <g transform="translate(18 8.463999999999999) scale(1.2959999999999998)">
+                <defs>
+                  <linearGradient
+                    id="mount-fallback-sidebar-shell"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stop-color="#ff4d4d" />
+                    <stop offset="100%" stop-color="#991b1b" />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M60 10 C30 10 15 35 15 55 C15 75 30 95 45 100 L45 110 L55 110 L55 100 C55 100 60 102 65 100 L65 110 L75 110 L75 100 C90 95 105 75 105 55 C105 35 90 10 60 10Z"
+                  fill="url(#mount-fallback-sidebar-shell)"
+                />
+                <path
+                  d="M20 45 C5 40 0 50 5 60 C10 70 20 65 25 55 C28 48 25 45 20 45Z"
+                  fill="url(#mount-fallback-sidebar-shell)"
+                />
+                <path
+                  d="M100 45 C115 40 120 50 115 60 C110 70 100 65 95 55 C92 48 95 45 100 45Z"
+                  fill="url(#mount-fallback-sidebar-shell)"
+                />
+                <path
+                  d="M45 15 Q35 5 30 8"
+                  stroke="#ff4d4d"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M75 15 Q85 5 90 8"
+                  stroke="#ff4d4d"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+                <circle cx="45" cy="35" r="6" fill="#181A1F" />
+                <circle cx="75" cy="35" r="6" fill="#181A1F" />
+                <circle cx="46" cy="34" r="2.5" fill="#DDE2E9" opacity="0.82" />
+                <circle cx="76" cy="34" r="2.5" fill="#DDE2E9" opacity="0.82" />
+              </g>
+            </g>
+            <g fill="currentColor" transform="translate(200.5 116.564)">
+              <path
+                d="M385 -10Q219 -10 122.0 84.0Q25 178 25.0 335.0Q25 492 122.0 586.0Q219 680 385 680Q554 680 651.5 586.5Q749 493 749.0 335.0Q749 177 651.5 83.5Q554 -10 385 -10ZM229.0 179.0Q274 134 385.0 134.0Q496 134 542.5 179.0Q589 224 589.0 335.0Q589 446 542.5 491.0Q496 536 385.0 536.0Q274 536 229.0 491.0Q184 446 184.0 335.0Q184 224 229.0 179.0Z"
+                transform="translate(0.0000 0.0000) scale(0.108000 -0.108000)"
+              />
+              <path
+                d="M190 -170H40V501H179V364H189Q217 511 389 511Q503 511 566.0 441.0Q629 371 629.0 250.0Q629 129 567.5 59.5Q506 -10 394 -10Q309 -10 259.5 28.5Q210 67 197 135H190ZM190 243Q190 181 226.5 154.0Q263 127 336 127Q410 127 443.5 155.0Q477 183 477.0 250.0Q477 317 443.5 345.0Q410 373 337 373Q262 373 226.0 344.5Q190 316 190 251Z"
+                transform="translate(85.7520 0.0000) scale(0.108000 -0.108000)"
+              />
+              <path
+                d="M306 -10Q176 -10 100.5 55.5Q25 121 25 250Q25 369 101.5 440.0Q178 511 303.0 511.0Q428 511 502.0 447.5Q576 384 576 268Q576 254 572 220H164Q167 161 198.0 135.5Q229 110 301 110Q366 110 393.5 126.5Q421 143 421 176V186H571V175Q571 93 498.0 41.5Q425 -10 306 -10ZM166 299H432Q429 349 397.5 371.5Q366 394 300.0 394.0Q234 394 202.5 371.0Q171 348 166 299Z"
+                transform="translate(158.2200 0.0000) scale(0.108000 -0.108000)"
+              />
+              <path
+                d="M190 0H40V501H179V347H188Q199 417 249.5 464.0Q300 511 392 511Q491 511 542.5 455.5Q594 400 594 312V0H444V262Q444 323 415.5 349.5Q387 376 319 376Q249 376 219.5 347.0Q190 318 190 253Z"
+                transform="translate(225.1800 0.0000) scale(0.108000 -0.108000)"
+              />
+              <path
+                d="M383 -10Q218 -10 121.5 84.0Q25 178 25.0 335.0Q25 492 121.5 586.0Q218 680 383 680Q540 680 632.5 606.5Q725 533 725 406V391H558V406Q558 473 517.0 504.5Q476 536 386 536Q275 536 229.5 491.0Q184 446 184.0 335.0Q184 224 229.5 179.0Q275 134 386 134Q476 134 517.0 165.5Q558 197 558 264V279H725V264Q725 137 632.5 63.5Q540 -10 383 -10Z"
+                transform="translate(295.3800 0.0000) scale(0.108000 -0.108000)"
+              />
+              <path
+                d="M190 0H40V670H190Z"
+                transform="translate(378.5400 0.0000) scale(0.108000 -0.108000)"
+              />
+              <path
+                d="M194 -10Q113 -10 67.0 25.5Q21 61 21 124Q21 238 183 255L398 277V296Q398 344 374.0 361.5Q350 379 289 379Q231 379 206.5 361.5Q182 344 182 302V298H31V301Q31 395 104.0 453.0Q177 511 300 511Q422 511 484.0 453.0Q546 395 546 294V0H406V115H398Q380 56 328.0 23.0Q276 -10 194 -10ZM172 134Q172 96 237 96Q316 96 355.5 117.5Q395 139 398 191L224 171Q172 167 172 134Z"
+                transform="translate(405.4320 0.0000) scale(0.108000 -0.108000)"
+              />
+              <path
+                d="M324 0H137L0 501H155L214 272L235 116H245L285 287L361 501H554L629 287L669 116H679L701 272L759 501H912L770 0H583L497 241L460 379H449L411 241Z"
+                transform="translate(470.4480 0.0000) scale(0.108000 -0.108000)"
+              />
+            </g>
+          </svg>
+          <div class="mount-fallback__skeleton-rows">
+            <span class="mount-fallback__skeleton-row"><span></span></span>
+            <span class="mount-fallback__skeleton-row"><span></span></span>
+            <span class="mount-fallback__skeleton-row"><span></span></span>
+            <span class="mount-fallback__skeleton-row"><span></span></span>
+          </div>
+        </div>
+      </div>
+      <div class="mount-fallback__main">
+        <header class="mount-fallback__topbar">
+          <svg
+            class="mount-fallback__wordmark"
+            role="img"
+            aria-label="Buddy"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="203 12 567 142"
+            fill="none"
+          >
+            <g fill="currentColor" transform="translate(200.5 116.564)">
+              <path
+                d="M385 -10Q219 -10 122.0 84.0Q25 178 25.0 335.0Q25 492 122.0 586.0Q219 680 385 680Q554 680 651.5 586.5Q749 493 749.0 335.0Q749 177 651.5 83.5Q554 -10 385 -10ZM229.0 179.0Q274 134 385.0 134.0Q496 134 542.5 179.0Q589 224 589.0 335.0Q589 446 542.5 491.0Q496 536 385.0 536.0Q274 536 229.0 491.0Q184 446 184.0 335.0Q184 224 229.0 179.0Z"
+                transform="translate(0.0000 0.0000) scale(0.108000 -0.108000)"
+              />
+              <path
+                d="M190 -170H40V501H179V364H189Q217 511 389 511Q503 511 566.0 441.0Q629 371 629.0 250.0Q629 129 567.5 59.5Q506 -10 394 -10Q309 -10 259.5 28.5Q210 67 197 135H190ZM190 243Q190 181 226.5 154.0Q263 127 336 127Q410 127 443.5 155.0Q477 183 477.0 250.0Q477 317 443.5 345.0Q410 373 337 373Q262 373 226.0 344.5Q190 316 190 251Z"
+                transform="translate(85.7520 0.0000) scale(0.108000 -0.108000)"
+              />
+              <path
+                d="M306 -10Q176 -10 100.5 55.5Q25 121 25 250Q25 369 101.5 440.0Q178 511 303.0 511.0Q428 511 502.0 447.5Q576 384 576 268Q576 254 572 220H164Q167 161 198.0 135.5Q229 110 301 110Q366 110 393.5 126.5Q421 143 421 176V186H571V175Q571 93 498.0 41.5Q425 -10 306 -10ZM166 299H432Q429 349 397.5 371.5Q366 394 300.0 394.0Q234 394 202.5 371.0Q171 348 166 299Z"
+                transform="translate(158.2200 0.0000) scale(0.108000 -0.108000)"
+              />
+              <path
+                d="M190 0H40V501H179V347H188Q199 417 249.5 464.0Q300 511 392 511Q491 511 542.5 455.5Q594 400 594 312V0H444V262Q444 323 415.5 349.5Q387 376 319 376Q249 376 219.5 347.0Q190 318 190 253Z"
+                transform="translate(225.1800 0.0000) scale(0.108000 -0.108000)"
+              />
+              <path
+                d="M383 -10Q218 -10 121.5 84.0Q25 178 25.0 335.0Q25 492 121.5 586.0Q218 680 383 680Q540 680 632.5 606.5Q725 533 725 406V391H558V406Q558 473 517.0 504.5Q476 536 386 536Q275 536 229.5 491.0Q184 446 184.0 335.0Q184 224 229.5 179.0Q275 134 386 134Q476 134 517.0 165.5Q558 197 558 264V279H725V264Q725 137 632.5 63.5Q540 -10 383 -10Z"
+                transform="translate(295.3800 0.0000) scale(0.108000 -0.108000)"
+              />
+              <path
+                d="M190 0H40V670H190Z"
+                transform="translate(378.5400 0.0000) scale(0.108000 -0.108000)"
+              />
+              <path
+                d="M194 -10Q113 -10 67.0 25.5Q21 61 21 124Q21 238 183 255L398 277V296Q398 344 374.0 361.5Q350 379 289 379Q231 379 206.5 361.5Q182 344 182 302V298H31V301Q31 395 104.0 453.0Q177 511 300 511Q422 511 484.0 453.0Q546 395 546 294V0H406V115H398Q380 56 328.0 23.0Q276 -10 194 -10ZM172 134Q172 96 237 96Q316 96 355.5 117.5Q395 139 398 191L224 171Q172 167 172 134Z"
+                transform="translate(405.4320 0.0000) scale(0.108000 -0.108000)"
+              />
+              <path
+                d="M324 0H137L0 501H155L214 272L235 116H245L285 287L361 501H554L629 287L669 116H679L701 272L759 501H912L770 0H583L497 241L460 379H449L411 241Z"
+                transform="translate(470.4480 0.0000) scale(0.108000 -0.108000)"
+              />
+            </g>
+          </svg>
+        </header>
+        <div class="mount-fallback__stage">
+          <div class="mount-fallback__panel" tabindex="-1">
+            <span class="mount-fallback__mascot" aria-hidden="true"
+              ><span class="mount-fallback__mascot-ground"></span
+              ><svg class="mount-fallback__mascot-figure" viewBox="-2 2 124 112" focusable="false">
+                <defs>
+                  <linearGradient
+                    id="mount-fallback-mascot-shell"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stop-color="#ff4d4d" />
+                    <stop offset="100%" stop-color="#991b1b" />
+                  </linearGradient>
+                </defs>
+                <g fill="none" stroke="#ff4d4d" stroke-width="3" stroke-linecap="round">
+                  <path d="M45 15 Q35 5 30 8" />
+                  <path d="M75 15 Q85 5 90 8" />
+                </g>
+                <g class="mount-fallback__mascot-claw-left">
+                  <path
+                    d="M20 45 C5 40 0 50 5 60 C10 70 20 65 25 55 C28 48 25 45 20 45Z"
+                    fill="url(#mount-fallback-mascot-shell)"
+                  />
+                </g>
+                <g class="mount-fallback__mascot-claw-right">
+                  <path
+                    d="M100 45 C115 40 120 50 115 60 C110 70 100 65 95 55 C92 48 95 45 100 45Z"
+                    fill="url(#mount-fallback-mascot-shell)"
+                  />
+                </g>
+                <path
+                  d="M60 10 C30 10 15 35 15 55 C15 75 30 95 45 100 L45 110 L55 110 L55 100 C55 100 60 102 65 100 L65 110 L75 110 L75 100 C90 95 105 75 105 55 C105 35 90 10 60 10Z"
+                  fill="url(#mount-fallback-mascot-shell)"
+                />
+                <g class="mount-fallback__mascot-eyes">
+                  <g class="mount-fallback__mascot-lids">
+                    <circle cx="45" cy="35" r="6" fill="#181A1F" />
+                    <circle cx="75" cy="35" r="6" fill="#181A1F" />
+                    <circle cx="46" cy="34" r="2.5" fill="#DDE2E9" opacity="0.82" />
+                    <circle cx="76" cy="34" r="2.5" fill="#DDE2E9" opacity="0.82" />
+                  </g>
+                </g></svg
+            ></span>
+            <h1 id="openclaw-mount-fallback-title">Control UI didn’t start</h1>
+            <p id="openclaw-mount-fallback-summary">
+              The page loaded, but the app didn’t start. Trying again automatically.
+            </p>
+            <div class="mount-fallback__actions">
+              <button
+                type="button"
+                id="openclaw-mount-retry"
+                class="mount-fallback__button mount-fallback__button--primary"
+              >
+                Reload
+              </button>
+            </div>
+            <a
+              id="openclaw-mount-help"
+              class="mount-fallback__help"
+              href="https://docs.openclaw.ai/web/control-ui#blank-control-ui-page"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                <path d="M12 17h.01" /></svg
+              >Troubleshooting</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <script data-cfasync="false">(function(){var I=document.querySelector("openclaw-app"),n=document.getElementById("openclaw-mount-fallback");if(!I||!n)return;var u=n.querySelector(".mount-fallback__panel"),y=document.getElementById("openclaw-mount-fallback-title"),m=document.getElementById("openclaw-mount-fallback-summary"),R=m.textContent,p=document.getElementById("openclaw-mount-retry"),h=n.querySelector(".mount-fallback__actions");function i(e){h&&(h.style.display=e?"":"none"),n.setAttribute("data-recovery",e?"stopped":"running")}i(!1);var f=Number(n.getAttribute("data-openclaw-mount-timeout-ms")),b=Number.isFinite(f)&&f>0?f:12e3,g=3,w,v,E=0,d=0,r=!1,a=document.readyState==="complete",o;n.addEventListener("mousedown",function(e){if(!(e.button!==0||e.defaultPrevented)&&!(!(e.target instanceof Element)||e.target.closest(".mount-fallback__panel"))){var t=window.webkit?.messageHandlers?.openclawWindowDrag;if(t)try{t.postMessage({type:"window-drag"}),e.preventDefault()}catch{}}});try{var c=new URL(window.location.href),L=c.searchParams.get("openclaw_mount_recovery");if(L!==null){var s=Number(L);d=Number.isInteger(s)&&s>=1&&s<=g?s:1}(d||c.searchParams.has("openclaw_http_auth"))&&(c.searchParams.delete("openclaw_mount_recovery"),c.searchParams.delete("openclaw_http_auth"),window.history.replaceState(null,"",c.href))}catch{}function B(){n.hidden=!0,document.body.classList.remove("openclaw-mount-fallback-active")}function l(e){m&&(m.textContent=e)}function k(){window.clearTimeout(v),o&&o.abort(),o=void 0}function A(){if(window.clearTimeout(v),!r){var e=Math.min(15e3,1e3*Math.pow(2,Math.min(E-1,4)));v=window.setTimeout(_,e)}}function D(){o=void 0,!r&&(l("Couldn’t reach Buddy to reload this page. Trying again automatically."),A())}function _(){if(!(r||o)){if(typeof window.fetch!="function"){i(!0),l("This browser can’t retry automatically. Reload the page to try again.");return}i(!1);var e=new URL(window.location.href);if(d>=g){i(!0),l("The app didn’t load in this tab.");return}E+=1,e.searchParams.set("openclaw_mount_recovery",String(d+1));var t=new AbortController;o=t;var S=window.setTimeout(function(){t.abort()},b);window.fetch(e.href,{cache:"no-store",credentials:"same-origin",signal:t.signal}).then(function(N){if(!N.ok)throw new Error("gateway unavailable");!r&&o===t&&window.location.replace(e.href)}).catch(function(){o===t&&D()}).finally(function(){window.clearTimeout(S)})}}function M(){if(!r&&(y.textContent=a?"Control UI didn’t start":"Control UI is still loading",n.setAttribute("role",a?"alert":"status"),l(a?R:"The app is still downloading."),a&&_(),n.hidden=!1,document.body.classList.add("openclaw-mount-fallback-active"),a&&u&&typeof u.focus=="function"))try{u.focus({preventScroll:!0})}catch{u.focus()}}function T(){window.clearTimeout(w),w=window.setTimeout(M,b)}T(),document.addEventListener("DOMContentLoaded",function(){var e=document.getElementById("openclaw-boot-styles");function t(){e&&(e.removeEventListener("load",t),e.removeEventListener("error",t)),a=!0,r||T()}e&&e.media==="print"?(e.addEventListener("load",t,{once:!0}),e.addEventListener("error",t,{once:!0})):t()},{once:!0});function C(){r=!0,window.clearTimeout(w),k(),B()}window.addEventListener("openclaw-control-ui-rendered",C,{once:!0}),window.addEventListener("openclaw-control-ui-unsupported-browser",C,{once:!0}),window.addEventListener("openclaw-control-ui-unsupported-browser-failed",function(){y.textContent="Browser guidance didn’t load",l("Check your connection, then reload the page."),document.getElementById("openclaw-mount-help").hidden=!0,n.hidden=!1,document.body.replaceChildren(n),document.body.classList.add("openclaw-mount-fallback-active"),i(!0),p.focus()},{once:!0}),p.addEventListener("click",function(){k(),window.location.reload()})})();</script>
+    <script data-cfasync="false" nomodule>document.body.innerHTML='<main style="padding:24px;color:#f4f4f5"><h1>This browser is not supported</h1><p>Open the Control UI in an up-to-date browser, or update your system WebView.</p></main>';</script>
+  </body>
+</html>
